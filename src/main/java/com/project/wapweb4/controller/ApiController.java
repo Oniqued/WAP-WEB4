@@ -1,19 +1,17 @@
 package com.project.wapweb4.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
-@RestController
+@Controller
 public class ApiController {
-
-    @GetMapping("/hello")
-    public HashMap hello() {
-        HashMap result = new HashMap();
-        result.put("message", "안녕하세요");
-
-        return result;
+    @GetMapping("/sign-in")
+    public String signIn(){
+        return "sign-in/index";
     }
-
 }
